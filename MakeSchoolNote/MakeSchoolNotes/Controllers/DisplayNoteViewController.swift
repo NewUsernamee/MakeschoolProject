@@ -25,7 +25,7 @@ class DisplayNoteViewController: UIViewController {
         {
             //if (noteContentTextView.text != "")
             //{
-            let note = self.note ?? CoreDataHelper.createNote()
+            let note = CoreDataHelper.createNote()
             note.title = noteTitleTextField.text ?? ""
             if (note.title == "")
             {

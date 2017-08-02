@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 
 class WeekTableViewController: UITableViewController {
+
     var events = [Event]() {
         didSet {
             tableView.reloadData()
@@ -23,8 +24,7 @@ class WeekTableViewController: UITableViewController {
         let screenHeight = screenSize.height
         print("Screen width = \(screenWidth), screen height = \(screenHeight)")
         
-        
-        
+
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -55,7 +55,7 @@ class WeekTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath)
 
         // Configure the cell...
-
+        
         return cell
     }
     

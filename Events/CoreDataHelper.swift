@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Make School. All rights reserved.
 //
 
-import Foundation
+//import Foundation
 import Foundation
 import CoreData
 import UIKit
@@ -31,7 +31,7 @@ class CoreDataHelper
         }
     }
     
-    static func getEventFromData() -> [Event]
+    static func getEventFromData() -> [String:[Any]]
     {
         let fetchRequest = NSFetchRequest<Event>(entityName:"Event")
         do
@@ -43,7 +43,7 @@ class CoreDataHelper
         {
             print("\(error)")
         }
-        return []
+        return [:]
     }
     
     static func deleteEvent(event: Event)

@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +13,7 @@
         <scene sceneID="wDR-4G-oA7">
             <objects>
                 <tableViewController id="0wm-mI-3hH" customClass="WeekTableViewController" customModule="Events" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" id="bQs-xe-8Mv">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" id="bQs-xe-8Mv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -26,38 +25,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J5z-ga-nPO">
-                                            <rect key="frame" x="60" y="-31" width="200" height="79.5"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRN-ey-CYa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="79.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horizontal Stack View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGg-d2-YKL">
-                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="79.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <color key="backgroundColor" red="1" green="0.52259657118055558" blue="0.1164822048611111" alpha="1" colorSpace="calibratedRGB"/>
-                                        </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TR-zN-SgU">
-                                            <rect key="frame" x="8" y="22" width="34" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUT-aP-HEF" userLabel="Day Label">
+                                            <rect key="frame" x="8" y="0.0" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjH-KP-cJW" userLabel="Event Name Label">
+                                            <rect key="frame" x="19" y="17" width="180" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="7TR-zN-SgU" firstAttribute="top" secondItem="3gF-UR-I5N" secondAttribute="topMargin" constant="14" id="1CN-uv-knx"/>
-                                        <constraint firstItem="7TR-zN-SgU" firstAttribute="leading" secondItem="3gF-UR-I5N" secondAttribute="leadingMargin" id="TC6-Nc-2mG"/>
-                                        <constraint firstItem="J5z-ga-nPO" firstAttribute="top" secondItem="3gF-UR-I5N" secondAttribute="topMargin" constant="-39" id="TJV-Ru-X0S"/>
-                                        <constraint firstItem="7TR-zN-SgU" firstAttribute="bottom" secondItem="J5z-ga-nPO" secondAttribute="bottom" constant="-6" id="c0c-Jj-oxS"/>
-                                        <constraint firstItem="J5z-ga-nPO" firstAttribute="leading" secondItem="3gF-UR-I5N" secondAttribute="leadingMargin" constant="52" id="sXm-We-ePC"/>
-                                        <constraint firstItem="J5z-ga-nPO" firstAttribute="centerX" secondItem="3gF-UR-I5N" secondAttribute="centerX" id="uga-mk-K7c"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -110,7 +92,7 @@
                                 <state key="normal" title="Create"/>
                                 <connections>
                                     <action selector="createButtonTapped:" destination="nvD-DJ-FSe" eventType="touchUpInside" id="FGM-d3-MCO"/>
-                                    <segue destination="Vor-MY-dxX" kind="unwind" identifier="create" unwindAction="unwindToCreateEventViewController:" id="1dU-fB-wNL"/>
+                                    <segue destination="Vor-MY-dxX" kind="unwind" identifier="createEvent" unwindAction="unwindToCreateEventViewController:" id="1dU-fB-wNL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwo-KK-8nN">
